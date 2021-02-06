@@ -1,0 +1,38 @@
+/* CSS so elements are flush with the browser's edges */
+*{
+    margin: 0%;
+}
+
+/* Setting the background colour of the entire page */
+body{
+    background-color: rgb(49, 58, 66);
+}
+
+/* Making a flex container and setting it's direction */
+.flex-container{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Making it so a tags that link buttons to another page does not have 
+any decorations and look normal */
+a{
+    text-decoration: none;
+    color: black;
+}
+
+/* CSS for each box in the flex container */
+.flex-box{
+    height: 200px;
+    border-radius: 20px;
+    background-color: white;
+    margin: 25px 25px 25px 25px;
+    box-shadow: -1px 1px 33px -8px rgba(0,0,0,0.75) inset;
+    -webkit-box-shadow: -1px 1px 33px -8px rgba(0,0,0,0.75) inset;
+    -moz-box-shadow: -1px 1px 33px -8px rgba(0,0,0,0.75) inset;
+}
+
+/* CSS for the content in each box in the flex container */
+.content{
+    padding: 15px 0px 0px 15px;
+}
