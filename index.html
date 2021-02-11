@@ -2,24 +2,49 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="css/index.css"> 
+    <title>Homepage</title>
 </head>
+
 <body>
-    <h1>Trivia API Testing</h1>
-    <h4 id = "score">Score: 0</h4>
-    <p id = "category"></p>
-    <p id = "question"></p>
-    <button id = "answer1"></button>
-    <button id = "answer2"></button>
-    <button id = "answer3"></button>
-    <button id = "answer4"></button>
+    <!-- Will replace index as the index page when done -->
+    <!--Container for buttons that lead to quiz-->
+    <div class = "flex-container">
+        <a href = "Trivia.html">
+            <!--Buttons for each quiz-->
+            <div class = "flex-box">
+                <div class = "content">
+                    <!--Header that will display quiz's name-->
+                    <div class = "category-header">
+                        <h2>Trivia quiz</h2>
+                    </div>
+                    <!--Short description of the quiz's category-->
+                    <div class = "category-description">
+                        <h4>From video games to music, test your knowledge on the world with this trivia quiz!</h4>
+                    </div>
+                </div>
+            </div>
+        </a>
 
+        
+        <a href = "Blackjack.html">
+            <!--Buttons for each quiz-->
+            <div class = "flex-box">
+                <div class = "content">
+                    <!--Header that will display quiz's name-->
+                    <div class = "category-header">
+                        <h2>Blackjack</h2>
+                    </div>
+                    <!--Short description of the quiz's category-->
+                    <div class = "category-description">
+                        <h4>Test your fortunes in this game of luck, will you double your points or lose it all?</h4>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
 
-
-
-
-    <script src="js/indexJS.js"></script>
 </body>
 </html>

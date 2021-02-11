@@ -1,7 +1,7 @@
 # ID_S10194236_OzzyTham_TriviaGameSite
 #### Live site: https://ozzywithab.github.io/ID_S10194236_OzzyTham_TriviaGameSite/
 
-### Second commit
+### Third commit
 
 #### Features of current version
 
@@ -17,7 +17,9 @@
 
 * New homepage, yet to complete or make it the index page (2nd commit)
 
-* Started CSS for homepage, will be renamed to index.css when homepage is the index (2nd commit)
+* Homepage.html is now index.html and links to both trivia game and blackjack (3rd commit)
+
+* Implemented Deck Of Cards API (3rd commit)
 
 #### Features to implement
 
@@ -29,7 +31,7 @@
 
 * Home page
 
-* More gamemodes?
+* Two new games, blackjack(Card API implemented) and Dice(Yet to start) (3rd commit)
 
 * Add CSS for the quiz's page (2nd commit)
 
