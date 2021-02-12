@@ -21,11 +21,13 @@
 
 * Implemented Deck Of Cards API (3rd commit)
 
+* Player not allowed to get more than 5 questions wrong in trivia (4th commit)
+
 #### Features to implement
 
 * Leaderboards
 
-* Question limit/cap
+* Question limit/cap (Done)
 
 * More categories of questions
 

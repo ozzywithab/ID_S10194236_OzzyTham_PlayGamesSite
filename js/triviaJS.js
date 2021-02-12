@@ -5,6 +5,9 @@ $(document).ready(function(){
     //The max score is the number of questions done * 100
     localStorage.setItem("maxScore", 0)
 
+    //Hint counter
+    let hintCount = 0;
+
     //Calling for functions
     useApiReqVideoGames()
 
@@ -66,6 +69,22 @@ $(document).ready(function(){
 
         //Displaying it to user in HTML
         document.querySelector("#score").innerHTML = `Score: ${currentScore}/ ${newMaxScore}`
-        useApiReqVideoGames();
+        if (newMaxScore - currentScore >= 500){
+            console.log("testing")
+        }
+        else{
+            useApiReqVideoGames();
+        }
+    })
+
+    //If player wants hint, take away 2 wrong answer and award only half points for correct answer
+    $("#hint").on("click", function(){
+        console.log("HINT");
+        hint = hint + 1;
+        if (document.querySelector("#answer2").innerHTML == questionData.results[0].incorrect_answers[0]){
+            console.log("Testing")
+            document.querySelector("#answer2").style.visibility = 'hidden';
+        }
+        //WIP NEEDS TO BE FINISHED AFTER WRONG ASNWERS ARE RANDOMIZED
     })
 })

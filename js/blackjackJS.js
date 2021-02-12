@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
     //Deck count is the number of cards remaining in the deck
+    //Set to 0 as new deck is generated everytime
     let deckCount = 0
 
     createNewDeck()
@@ -19,21 +20,19 @@ $(document).ready(function(){
     }
 
     async function dealCards(deckID){
-        //Draws 2 cards from current deck
-        await fetch ("https://deckofcardsapi.com/api/deck/" +deckID+ "/draw/?count=2")
+        //Draws 4 cards from current deck
+        await fetch ("https://deckofcardsapi.com/api/deck/" +deckID+ "/draw/?count=4")
         .then(Response => Response.json())
-        .then(data => firstDraw = data)
+        .then(data => cardDraw = data)
 
-        //From this draw, deal first card to dealer, second to player
-        dealerFirst = firstDraw.cards[0];
-        playerFirst = firstDraw.cards[1];
+        //From this draw, deal first card to dealer, second to player as shown cards
+        dealerShow = cardDraw.cards[0];
+        playerShow = cardDraw.cards[1];
 
-        await fetch ("https://deckofcardsapi.com/api/deck/" +deckID+ "/draw/?count=2")
-        .then(Response => Response.json())
-        .then(data => secondDraw = data)
+        //Deal the next 2 cards the same way but as hidden cards
+        dealerHidden = cardDraw.cards[2]
+        playerHidden = cardDraw.cards[3]
 
-        //From this draw, deal first card to dealer, second to player
-        dealerSecond = secondDraw.cards[0];
-        playerSecond = secondDraw.cards[1];
+        console.log(dealerShow, playerShow, dealerHidden, playerHidden)
     }
 })
