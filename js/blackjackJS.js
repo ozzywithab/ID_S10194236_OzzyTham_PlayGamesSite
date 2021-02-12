@@ -34,5 +34,27 @@ $(document).ready(function(){
         playerHidden = cardDraw.cards[3]
 
         console.log(dealerShow, playerShow, dealerHidden, playerHidden)
+
+        //Lines to show cards to player
+        $("#dealerShow").empty();
+        $("#dealerShow").append("<img src='" + dealerShow.image + "'>");
+        document.querySelector("#dealerShowText").innerHTML = `Suit: ${dealerShow.suit} Value: ${dealerShow.value}`;
+        
+        $("#playerShow").empty();
+        $("#playerShow").append("<img src='" + playerShow.image + "'>");
+        document.querySelector("#playerShowText").innerHTML = `Suit: ${playerShow.suit} Value: ${playerShow.value}`;
+
+        //Make it hidden later
+        $("#dealerHidden").empty();
+        $("#dealerHidden").append("<img src='" + dealerHidden.image + "'>");
+        document.querySelector("#dealerHiddenText").innerHTML = `Suit: ${dealerHidden.suit} Value: ${dealerHidden.value}`
+
+        //Make it hidden later
+        $("#playerHidden").empty();
+        $("#playerHidden").append("<img src='" + playerHidden.image + "'>");
+        document.querySelector("#playerHiddenText").innerHTML = `Suit: ${playerHidden.suit} Value: ${playerHidden.value}`
+
     }
+
+
 })
