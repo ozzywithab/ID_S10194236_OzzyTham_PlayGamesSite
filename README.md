@@ -23,7 +23,11 @@
 
 * Player not allowed to get more than 5 questions wrong in trivia (4th commit)
 
+* Dice game is implemented fully, need to find dice icons (5th commit)
+
 #### Features to implement
+
+* ALL PAGES NEED HTML AND CSS TO BE DONE
 
 * Leaderboards
 
@@ -33,12 +37,5 @@
 
 * Home page
 
-* Two new games, blackjack(Card API implemented) and Dice(Yet to start) (3rd commit)
+* Two new games, blackjack(Card API implemented) and Dice(Done) (3rd commit)
 
-* Add CSS for the quiz's page (2nd commit)
-
-* Move files to their respective folders (Need to make homepage.html to index.html, same goes for homepage.css) (2nd commit)
-
-* Make a nav bar (2nd commit)
-
-* Make background images for the buttons in the current homepage.css (2nd commit)
