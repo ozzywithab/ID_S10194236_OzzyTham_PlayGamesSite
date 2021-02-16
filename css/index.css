@@ -5,31 +5,98 @@
 
 /* Setting the background colour of the entire page */
 body{
-    background-color: rgb(49, 58, 66);
+    background-color: white;
 }
 
-/* Making a flex container and setting it's direction */
-.flex-container{
+/* Navigation bar CSS */
+header{
+    background-color: white;
+    color: #1e355c;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 2% 15px 2%;
+}
+
+/* Navigation bar CSS so list items have no dots*/
+.links{
+    list-style: none;
+}
+
+/*Navigation bar CSS, spacing out the buttons*/
+.links li{
+    display: inline-block;
+    padding: 0px 25px;
+}
+
+/*CSS for nav bar text*/
+.links li a{
+    font-size: 17px;
+    color: #1e355c;
+    text-decoration: none;
+}
+
+/*CSS for nav bar text when hovering*/
+.links li a:hover, .siteName:hover{
+    color: #0ca096;
+}
+
+.bigBackground{
+    position: relative;
+    height: fit-content;
+    margin-top: -5px;
+    margin-bottom: -15px;
+}
+
+.bigBackground lottie-player{
+    width: 100%;
+}
+
+/* .bigBackgroundText{
+    padding: 25px;
+    background-color: black;
+} */
+
+.bigBackground h3{
+    position: absolute;
+    margin: auto;
+    top: 0px; bottom: 0px;
+    left: 0px; right: 0px;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19) inset, 0 6px 6px rgba(0,0,0,0.23) inset;
+    color: #20345c;
+    padding: 25px;
+    background-color: rgb(15, 15, 15);
+    width: fit-content; height: fit-content;
 }
 
 /* Making it so a tags that link buttons to another page does not have 
 any decorations and look normal */
-a{
-    text-decoration: none;
-    color: black;
+
+/* Changing bootstrap properties so container is flush with browser edges*/
+.container-fluid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 /* CSS for each box in the flex container */
 .flex-box{
-    height: 200px;
-    border-radius: 20px;
-    background-color: white;
-    margin: 25px 25px 25px 25px;
-    box-shadow: -1px 1px 33px -8px rgba(0,0,0,0.75) inset;
-    -webkit-box-shadow: -1px 1px 33px -8px rgba(0,0,0,0.75) inset;
-    -moz-box-shadow: -1px 1px 33px -8px rgba(0,0,0,0.75) inset;
+    text-decoration: none;
+    color: white;
+    display: block;
+    height: 350px;
+    width: 100%;
+    padding: 25px;
+    margin: 25px;
+    background-color: #1e355c;
+    margin: 0px;
+    text-align: center;
+}
+.flex-box p {
+    color: rgba(255, 255, 255, 0.50);
 }
 
 /* CSS for the content in each box in the flex container */
