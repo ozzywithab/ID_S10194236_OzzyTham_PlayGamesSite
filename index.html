@@ -4,17 +4,40 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="css/index.css"> 
     <title>Homepage</title>
 </head>
 
 <body>
-    <!-- Will replace index as the index page when done -->
+    <!--Navigation bar-->
+    <header>
+        <h3 class = "siteName">PlayGames</h3>
+        <nav>
+            <ul class = "links">
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "api.html">API's</a></li>
+                <li><a href = "contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Big background w/ lottie animation-->
+    <div class = "bigBackground">
+        <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_fznwzd5n.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
+        <div class = "bigBackgroundText">
+            <h3>
+                PlayGames Site by Ozzy and De Chuan
+            </h3>
+        </div>
+    </div>
+
     <!--Container for buttons that lead to quiz-->
-    <div class = "flex-container">
-        <a href = "Trivia.html">
+    <div class = "container-fluid">
+        <a href = "Trivia.html" class = "flex-box">
             <!--Buttons for each quiz-->
-            <div class = "flex-box">
+            <div>
                 <div class = "content">
                     <!--Header that will display quiz's name-->
                     <div class = "category-header">
@@ -22,16 +45,31 @@
                     </div>
                     <!--Short description of the quiz's category-->
                     <div class = "category-description">
-                        <h4>From video games to music, test your knowledge on the world with this trivia quiz!</h4>
+                        <p>From video games to music, test your knowledge on the world with this trivia quiz!</p>
                     </div>
                 </div>
             </div>
         </a>
 
-        
-        <a href = "Blackjack.html">
+        <a href = "Dice.html" class = "flex-box">
             <!--Buttons for each quiz-->
-            <div class = "flex-box">
+            <div>
+                <div class = "content">
+                    <!--Header that will display quiz's name-->
+                    <div class = "category-header">
+                        <h2>Dice</h2>
+                    </div>
+                    <!--Short description of the quiz's category-->
+                    <div class = "category-description">
+                        <p>Guess the number and multiply your points in a game of dice!</p>
+                    </div>
+                </div>
+            </div>
+        </a>
+        
+        <a href = "Blackjack.html" class = "flex-box">
+            <!--Buttons for each quiz-->
+            <div>
                 <div class = "content">
                     <!--Header that will display quiz's name-->
                     <div class = "category-header">
@@ -39,12 +77,14 @@
                     </div>
                     <!--Short description of the quiz's category-->
                     <div class = "category-description">
-                        <h4>Test your fortunes in this game of luck, will you double your points or lose it all?</h4>
+                        <p>Test your fortunes in this game of luck, will you double your points or lose it all?</p>
                     </div>
                 </div>
             </div>
         </a>
     </div>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 </body>
 </html>

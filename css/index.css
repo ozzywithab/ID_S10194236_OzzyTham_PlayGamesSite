@@ -52,10 +52,7 @@ header{
     width: 100%;
 }
 
-/* .bigBackgroundText{
-    padding: 25px;
-    background-color: black;
-} */
+
 
 .bigBackground h3{
     position: absolute;
@@ -66,7 +63,7 @@ header{
     box-shadow: 0 10px 20px rgba(0,0,0,0.19) inset, 0 6px 6px rgba(0,0,0,0.23) inset;
     color: #20345c;
     padding: 25px;
-    background-color: rgb(15, 15, 15);
+    background-color: white;
     width: fit-content; height: fit-content;
 }
 

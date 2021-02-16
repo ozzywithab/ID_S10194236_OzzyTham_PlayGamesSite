@@ -1,7 +1,7 @@
 # ID_S10194236_OzzyTham_TriviaGameSite
 #### Live site: https://ozzywithab.github.io/ID_S10194236_OzzyTham_TriviaGameSite/
 
-### Third commit
+### I forgot # commit
 
 #### Features of current version
 
@@ -25,9 +25,11 @@
 
 * Dice game is implemented fully, need to find dice icons (5th commit)
 
+* Fully done CSS for index page, colours of certain elemnets need to be changed, buttons at bottom needs pictures, added at later time (Whatever # commit this is)
+
 #### Features to implement
 
-* ALL PAGES NEED HTML AND CSS TO BE DONE
+* ALL PAGES NEED HTML AND CSS TO BE DONE (index.html done!)
 
 * Leaderboards
 
