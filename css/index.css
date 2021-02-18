@@ -5,7 +5,7 @@
 
 /* Setting the background colour of the entire page */
 body{
-    background-color: white;
+    background-color: #1e355c;
 }
 
 /* Navigation bar CSS */
@@ -31,14 +31,14 @@ header{
 
 /*CSS for nav bar text*/
 .links li a{
-    font-size: 17px;
+    font-size: 20px;
     color: #1e355c;
     text-decoration: none;
 }
 
 /*CSS for nav bar text when hovering*/
 .links li a:hover, .siteName:hover{
-    color: #0ca096;
+    color: #658891;
 }
 
 .bigBackground{
@@ -79,6 +79,10 @@ any decorations and look normal */
     padding-right: 0px;
 }
 
+.container-fluid a:hover{
+    color: #658891;
+}
+
 /* CSS for each box in the flex container */
 .flex-box{
     text-decoration: none;
@@ -88,10 +92,11 @@ any decorations and look normal */
     width: 100%;
     padding: 25px;
     margin: 25px;
-    background-color: #1e355c;
     margin: 0px;
     text-align: center;
+    background-image: linear-gradient(#1E355c, #38668E);
 }
+
 .flex-box p {
     color: rgba(255, 255, 255, 0.50);
 }
@@ -100,3 +105,4 @@ any decorations and look normal */
 .content{
     padding: 15px 0px 0px 15px;
 }
+
