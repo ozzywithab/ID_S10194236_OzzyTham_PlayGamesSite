@@ -5,6 +5,10 @@
 /* Setting the background colour of the entire page */
 body{
     background-color: #1e355c;
+    background-image: url("diceBackground.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
 /* Navigation bar CSS */

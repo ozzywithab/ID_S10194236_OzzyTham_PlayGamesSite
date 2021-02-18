@@ -4,22 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/blackjack.css"> 
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/blackjack.css"> 
     <title>Blackjack</title>
 </head>
 <body>
+    <!--Navigation bar-->
+    <header>
+        <h3 class = "siteName">PlayGames</h3>
+        <nav>
+            <ul class = "links">
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "api.html">API's</a></li>
+                <li><a href = "contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h4>Dealer's hand</h4>
-    <div id = "dealerCards"></div>
-    <p id = "dealerTotal"></p>
+    <div class = "contentBox">
+        <h4>Dealer's hand</h4>
+        <div id = "dealerCards"></div>
 
-    <h4>Your hand</h4>
-    <div id = "playerCards"></div>
-    <p id = "playerTotal"></p>
+        <h4>Your hand</h4>
+        <div id = "playerCards"></div>
 
-    <button type="button" class="btn btn-primary" id = "hit">Hit</button>
-    <button type="button" class="btn btn-warning" id = "stay">Stay</button>
+        <div class = "buttons">
+            <button class="btn btn-primary btn-lg" id = "hit">Hit</button>
+            <button class="btn btn-warning btn-lg" id = "stay">Stay</button>
+        </div>
+    </div>
+
+    <div id = "modalBoxWin">
+        <div class = "modalContent">
+            <h4>You win!</h4>
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_to9cPV.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
+            <h5 id = "endStatementPlayer">Testing</h5>
+            <h5 id = "endStatementDealer">Testing</h5>
+            <a href = "blackjack.html"><button id = "playAgainButton" class="btn btn-outline-primary btn-lg">Play again!</button></a>
+        </div>
+    </div>
+
+    <div id = "modalBoxLose">
+        <div class = "modalContent">
+            <h4>You lost!</h4>
+            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_t5ulirqh.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
+            <h5 id = "endStatementPlayerLose">Testing</h5>
+            <h5 id = "endStatementDealerLose">Testing</h5>
+            <a href = "blackjack.html"><button id = "playAgainButton" class="btn btn-outline-primary btn-lg">Play again!</button></a>
+        </div>
+    </div>
+
+    <div id = "modalBoxDraw">
+        <div class = "modalContent">
+            <h4>It's a draw!</h4>
+            <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_x0VEPF.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
+            <h5 id = "endStatementPlayer">Testing</h5>
+            <h5 id = "endStatementDealer">Testing</h5>
+            <a href = "blackjack.html"><button id = "playAgainButton" class="btn btn-outline-primary btn-lg">Play again!</button></a>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>

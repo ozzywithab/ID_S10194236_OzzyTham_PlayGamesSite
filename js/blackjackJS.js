@@ -51,6 +51,15 @@ $(document).ready(function(){
         dealerHidden = cardDraw.cards[2]
         playerSecond = cardDraw.cards[3]
 
+        console.log("Testing")
+        // document.querySelector("#endStatementPlayer").innerHTML = `Your hand: DOUBLE ACES!`
+        // document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: -`
+        // document.querySelector("#modalBoxWin").style.display = "flex"
+
+        document.querySelector("#endStatementPlayerLose").innerHTML = `Your hand: TESTING`
+        document.querySelector("#endStatementDealerLose").innerHTML = `Dealer's hand: TESTING`
+        document.querySelector("#modalBoxLose").style.display = "flex"
+
         //Player has drawn 2 cards
         cardsDrawn += 2
 
@@ -73,6 +82,9 @@ $(document).ready(function(){
         //If player has 2 aces, he wins
         if (playerFirst.value == "ACE" && playerSecond.value == "ACE"){
             console.log("You win!")
+            document.querySelector("#endStatementPlayer").innerHTML = `Your hand: DOUBLE ACES!`
+            document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: -`
+            document.querySelector("#modalBoxWin").style.display = "flex"
         }
 
         //Calculating value of player's hand
@@ -112,7 +124,9 @@ $(document).ready(function(){
         //If dealer has 2 aces, he wins
         if (dealerShow.value == "ACE" && dealerHidden.value == "ACE"){
             console.log("Dealer wins!")
-
+            document.querySelector("#endStatementPlayer").innerHTML = `Your hand: ${playerTotal}`
+            document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: DOUBLE ACES!`
+            document.querySelector("#modalBoxLose").style.display = "flex"
             // ADD END GAME POP UP HERE
         }
 
@@ -172,19 +186,23 @@ $(document).ready(function(){
         else{
             playerTotal += parseInt(hitCard.cards[0].value)
         }
-        console.log(playerTotal)
-        console.log(cardsDrawn)
 
         //If after the card is drawn and the value is over 21, bust
         if (playerTotal > 21){
             console.log("Bust")
             document.getElementById("hit").disabled = true;
             document.getElementById("stay").disabled = true;
+            document.querySelector("#endStatementPlayer").innerHTML = `Your hand: ${playerTotal}`
+            document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: ${dealerTotal}`
+            document.querySelector("#modalBoxLose").style.display = "flex"
         }
 
         //If the player has 5 cards in his hand, he wins
         if (cardsDrawn >= 5){
             console.log("You won")
+            document.querySelector("#endStatementPlayer").innerHTML = `Your hand: ${playerTotal}`
+            document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: -`
+            document.querySelector("#modalBoxWin").style.display = "flex"
         }
 
     })
@@ -251,12 +269,21 @@ $(document).ready(function(){
         else if (dealerTotal > 16){
             if (dealerTotal > playerTotal){
                 console.log("Dealer wins!")
+                document.querySelector("#endStatementPlayer").innerHTML = `Your hand: ${playerTotal}`
+                document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: ${dealerTotal}`
+                document.querySelector("#modalBoxLose").style.display = "flex"
             }
             else if (dealerTotal == playerTotal){
                 console.log("Draw!")
+                document.querySelector("#endStatementPlayer").innerHTML = `Your hand: ${playerTotal}`
+                document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: ${dealerTotal}`
+                document.querySelector("#modalBoxDraw").style.display = "flex"
             }
             else{
                 console.log("Player wins")
+                document.querySelector("#endStatementPlayer").innerHTML = `Your hand: ${playerTotal}`
+                document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: ${dealerTotal}`
+                document.querySelector("#modalBoxWin").style.display = "flex"
             }
         }
     }
