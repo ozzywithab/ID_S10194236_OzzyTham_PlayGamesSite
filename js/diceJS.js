@@ -35,130 +35,12 @@ $(document).ready(function(){
     }
 
     //Check if player wins or loses based on dice values rolled
-
-    //If the player chooses "High", check values of dice and 
-    //determine if player wins or not
-    $("#High").on("click", function(){
-        //Clears away previous dice rolls
-        $("#diceOnePicture").empty();
-        $("#diceTwoPicture").empty();
-
-        //Showing the new first die's face to the user
-        if (diceOne == 1){
-            $("#diceOnePicture").append(diceFaceOne);
-        }
-        else if (diceOne == 2){
-            $("#diceOnePicture").append(diceFaceTwo);
-        }
-        else if (diceOne == 3){
-            $("#diceOnePicture").append(diceFaceThree);
-        }
-        else if (diceOne == 4){
-            $("#diceOnePicture").append(diceFaceFour);
-        }
-        else if (diceOne == 5){
-            $("#diceOnePicture").append(diceFaceFive);
-        }
-        else if (diceOne == 6){
-            $("#diceOnePicture").append(diceFaceSix);
-        }
-
-        //Showing the new second die's face to the user
-        if (diceTwo == 1){
-            $("#diceTwoPicture").append(diceFaceOne);
-        }
-        else if (diceTwo == 2){
-            $("#diceTwoPicture").append(diceFaceTwo);
-        }
-        else if (diceTwo == 3){
-            $("#diceTwoPicture").append(diceFaceThree);
-        }
-        else if (diceTwo == 4){
-            $("#diceTwoPicture").append(diceFaceFour);
-        }
-        else if (diceTwo == 5){
-            $("#diceTwoPicture").append(diceFaceFive);
-        }
-        else if (diceTwo == 6){
-            $("#diceTwoPicture").append(diceFaceSix);
-        }
-
-        console.log("High clicked")
-        if (totalValue > 6){
-            console.log("You win!")
-            document.querySelector("#diceTotal").innerHTML = `You rolled a ${totalValue}`
-            document.querySelector("#winLoseStatement").innerHTML = `You win!`
-            rollDice()
-        }
-        else{
-            console.log("You lost!")
-            document.querySelector("#diceTotal").innerHTML = `You rolled a ${totalValue}`
-            document.querySelector("#winLoseStatement").innerHTML = `You lost!`
-            rollDice()
-        }
-    })
-
-    $("#Low").on("click", function(){
-        //Clears away previous dice rolls
-        $("#diceOnePicture").empty();
-        $("#diceTwoPicture").empty();
-
-        //Showing the new first die's face to the user
-        if (diceOne == 1){
-            $("#diceOnePicture").append(diceFaceOne);
-        }
-        else if (diceOne == 2){
-            $("#diceOnePicture").append(diceFaceTwo);
-        }
-        else if (diceOne == 3){
-            $("#diceOnePicture").append(diceFaceThree);
-        }
-        else if (diceOne == 4){
-            $("#diceOnePicture").append(diceFaceFour);
-        }
-        else if (diceOne == 5){
-            $("#diceOnePicture").append(diceFaceFive);
-        }
-        else if (diceOne == 6){
-            $("#diceOnePicture").append(diceFaceSix);
-        }
-
-        //Showing the new second die's face to the user
-        if (diceTwo == 1){
-            $("#diceTwoPicture").append(diceFaceOne);
-        }
-        else if (diceTwo == 2){
-            $("#diceTwoPicture").append(diceFaceTwo);
-        }
-        else if (diceTwo == 3){
-            $("#diceTwoPicture").append(diceFaceThree);
-        }
-        else if (diceTwo == 4){
-            $("#diceTwoPicture").append(diceFaceFour);
-        }
-        else if (diceTwo == 5){
-            $("#diceTwoPicture").append(diceFaceFive);
-        }
-        else if (diceTwo == 6){
-            $("#diceTwoPicture").append(diceFaceSix);
-        }
-
-        console.log("Low clicked")
-        if (totalValue <= 6){
-            console.log("You win!")
-            document.querySelector("#diceTotal").innerHTML = `You rolled a ${totalValue}`
-            document.querySelector("#winLoseStatement").innerHTML = `You win!`
-            rollDice()
-        }
-        else{
-            console.log("You lost!")
-            document.querySelector("#diceTotal").innerHTML = `You rolled a ${totalValue}`
-            document.querySelector("#winLoseStatement").innerHTML = `You lost!`
-            rollDice()
-        }
-    })
-
     $("#1").on("click", function(){
+        //Clears away lottie animation
+        document.querySelector(".lottieDice").style.display = "none"
+        //Displays dice container
+        document.querySelector(".dicePictures").style.display = "flex"
+
         //Clears away previous dice rolls
         $("#diceOnePicture").empty();
         $("#diceTwoPicture").empty();
@@ -219,6 +101,11 @@ $(document).ready(function(){
     })
 
     $("#2").on("click", function(){
+        //Clears away lottie animation
+        document.querySelector(".lottieDice").style.display = "none"
+        //Displays dice container
+        document.querySelector(".dicePictures").style.display = "flex"
+
         //Clears away previous dice rolls
         $("#diceOnePicture").empty();
         $("#diceTwoPicture").empty();
@@ -279,6 +166,11 @@ $(document).ready(function(){
     })
 
     $("#3").on("click", function(){
+        //Clears away lottie animation
+        document.querySelector(".lottieDice").style.display = "none"
+        //Displays dice container
+        document.querySelector(".dicePictures").style.display = "flex"
+        
         //Clears away previous dice rolls
         $("#diceOnePicture").empty();
         $("#diceTwoPicture").empty();
@@ -339,6 +231,11 @@ $(document).ready(function(){
     })
 
     $("#4").on("click", function(){
+        //Clears away lottie animation
+        document.querySelector(".lottieDice").style.display = "none"
+        //Displays dice container
+        document.querySelector(".dicePictures").style.display = "flex"
+
         //Clears away previous dice rolls
         $("#diceOnePicture").empty();
         $("#diceTwoPicture").empty();
@@ -399,6 +296,11 @@ $(document).ready(function(){
     })
 
     $("#5").on("click", function(){
+        //Clears away lottie animation
+        document.querySelector(".lottieDice").style.display = "none"
+        //Displays dice container
+        document.querySelector(".dicePictures").style.display = "flex"
+
         //Clears away previous dice rolls
         $("#diceOnePicture").empty();
         $("#diceTwoPicture").empty();
@@ -459,6 +361,11 @@ $(document).ready(function(){
     })
 
     $("#6").on("click", function(){
+        //Clears away lottie animation
+        document.querySelector(".lottieDice").style.display = "none"
+        //Displays dice container
+        document.querySelector(".dicePictures").style.display = "flex"
+
         //Clears away previous dice rolls
         $("#diceOnePicture").empty();
         $("#diceTwoPicture").empty();
@@ -519,6 +426,11 @@ $(document).ready(function(){
     })
 
     $("#7").on("click", function(){
+        //Clears away lottie animation
+        document.querySelector(".lottieDice").style.display = "none"
+        //Displays dice container
+        document.querySelector(".dicePictures").style.display = "flex"
+
         //Clears away previous dice rolls
         $("#diceOnePicture").empty();
         $("#diceTwoPicture").empty();
@@ -579,6 +491,11 @@ $(document).ready(function(){
     })
 
     $("#8").on("click", function(){
+        //Clears away lottie animation
+        document.querySelector(".lottieDice").style.display = "none"
+        //Displays dice container
+        document.querySelector(".dicePictures").style.display = "flex"
+
         //Clears away previous dice rolls
         $("#diceOnePicture").empty();
         $("#diceTwoPicture").empty();
@@ -639,6 +556,11 @@ $(document).ready(function(){
     })
 
     $("#9").on("click", function(){
+        //Clears away lottie animation
+        document.querySelector(".lottieDice").style.display = "none"
+        //Displays dice container
+        document.querySelector(".dicePictures").style.display = "flex"
+
         //Clears away previous dice rolls
         $("#diceOnePicture").empty();
         $("#diceTwoPicture").empty();
@@ -699,6 +621,11 @@ $(document).ready(function(){
     })
 
     $("#10").on("click", function(){
+        //Clears away lottie animation
+        document.querySelector(".lottieDice").style.display = "none"
+        //Displays dice container
+        document.querySelector(".dicePictures").style.display = "flex"
+
         //Clears away previous dice rolls
         $("#diceOnePicture").empty();
         $("#diceTwoPicture").empty();
@@ -759,6 +686,11 @@ $(document).ready(function(){
     })
 
     $("#11").on("click", function(){
+        //Clears away lottie animation
+        document.querySelector(".lottieDice").style.display = "none"
+        //Displays dice container
+        document.querySelector(".dicePictures").style.display = "flex"
+        
         //Clears away previous dice rolls
         $("#diceOnePicture").empty();
         $("#diceTwoPicture").empty();
@@ -819,6 +751,11 @@ $(document).ready(function(){
     })
 
     $("#12").on("click", function(){
+        //Clears away lottie animation
+        document.querySelector(".lottieDice").style.display = "none"
+        //Displays dice container
+        document.querySelector(".dicePictures").style.display = "flex"
+        
         //Clears away previous dice rolls
         $("#diceOnePicture").empty();
         $("#diceTwoPicture").empty();

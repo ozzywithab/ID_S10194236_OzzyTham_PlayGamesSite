@@ -75,21 +75,43 @@ $(document).ready(function(){
         //If the correct answer is clicked, add 100 points and move on to next question
         if (document.querySelector("#answer1").innerHTML == correct){
             console.log("Correct answer selected")
-            //Setting new score since question was correct
-            let currentScore = parseInt(localStorage.getItem("score"));
-            let newScore = currentScore + 100;
 
-            //Setting new max score since 1 more question has been done
-            let currentMaxScore = parseInt(localStorage.getItem("maxScore"));
-            let newMaxScore = currentMaxScore + 100;
+            //If hint was used, only award half points
+            if (hintCounter > 0){
+                //Setting new score since question was correct
+                let currentScore = parseInt(localStorage.getItem("score"));
+                let newScore = currentScore + 50;
 
-            //Setting new values into the localStorage
-            localStorage.setItem("score", newScore);
-            localStorage.setItem("maxScore", newMaxScore);
+                //Setting new max score since 1 more question has been done
+                let currentMaxScore = parseInt(localStorage.getItem("maxScore"));
+                let newMaxScore = currentMaxScore + 100;
 
-            //Displaying it to user in HTML
-            document.querySelector("#score").innerHTML = `Score: ${newScore}/ ${newMaxScore}`
-            useApiReqVideoGames();
+                //Setting new values into the localStorage
+                localStorage.setItem("score", newScore);
+                localStorage.setItem("maxScore", newMaxScore);
+
+                //Displaying it to user in HTML
+                document.querySelector("#score").innerHTML = `Score: ${newScore}/ ${newMaxScore}`
+                useApiReqVideoGames();
+            }
+            //Else, award full points
+            else{
+                //Setting new score since question was correct
+                let currentScore = parseInt(localStorage.getItem("score"));
+                let newScore = currentScore + 100;
+
+                //Setting new max score since 1 more question has been done
+                let currentMaxScore = parseInt(localStorage.getItem("maxScore"));
+                let newMaxScore = currentMaxScore + 100;
+
+                //Setting new values into the localStorage
+                localStorage.setItem("score", newScore);
+                localStorage.setItem("maxScore", newMaxScore);
+
+                //Displaying it to user in HTML
+                document.querySelector("#score").innerHTML = `Score: ${newScore}/ ${newMaxScore}`
+                useApiReqVideoGames();
+            }
         }
         //Else, it is the wrong answer
         else{
@@ -110,6 +132,8 @@ $(document).ready(function(){
             //If they've gotten 5 questions wrong, the game is over
             if (newMaxScore - currentScore >= 500){
                 console.log("Game over")
+                document.querySelector(".modalBox").style.display = "flex"
+                document.querySelector("#endScore").innerHTML = `Score: ${currentScore} / ${newMaxScore}`
             }
             else{
                 useApiReqVideoGames();
@@ -123,21 +147,41 @@ $(document).ready(function(){
         //If the correct answer is clicked, add 100 points and move on to next question
         if (document.querySelector("#answer2").innerHTML == correct){
             console.log("Correct answer selected")
-            //Setting new score since question was correct
-            let currentScore = parseInt(localStorage.getItem("score"));
-            let newScore = currentScore + 100;
+            if (hintCounter > 0){
+                //Setting new score since question was correct
+                let currentScore = parseInt(localStorage.getItem("score"));
+                let newScore = currentScore + 50;
 
-            //Setting new max score since 1 more question has been done
-            let currentMaxScore = parseInt(localStorage.getItem("maxScore"));
-            let newMaxScore = currentMaxScore + 100;
+                //Setting new max score since 1 more question has been done
+                let currentMaxScore = parseInt(localStorage.getItem("maxScore"));
+                let newMaxScore = currentMaxScore + 100;
 
-            //Setting new values into the localStorage
-            localStorage.setItem("score", newScore);
-            localStorage.setItem("maxScore", newMaxScore);
+                //Setting new values into the localStorage
+                localStorage.setItem("score", newScore);
+                localStorage.setItem("maxScore", newMaxScore);
 
-            //Displaying it to user in HTML
-            document.querySelector("#score").innerHTML = `Score: ${newScore}/ ${newMaxScore}`
-            useApiReqVideoGames();
+                //Displaying it to user in HTML
+                document.querySelector("#score").innerHTML = `Score: ${newScore}/ ${newMaxScore}`
+                useApiReqVideoGames();
+            }
+            //Else, award full points
+            else{
+                //Setting new score since question was correct
+                let currentScore = parseInt(localStorage.getItem("score"));
+                let newScore = currentScore + 100;
+
+                //Setting new max score since 1 more question has been done
+                let currentMaxScore = parseInt(localStorage.getItem("maxScore"));
+                let newMaxScore = currentMaxScore + 100;
+
+                //Setting new values into the localStorage
+                localStorage.setItem("score", newScore);
+                localStorage.setItem("maxScore", newMaxScore);
+
+                //Displaying it to user in HTML
+                document.querySelector("#score").innerHTML = `Score: ${newScore}/ ${newMaxScore}`
+                useApiReqVideoGames();
+            }
         }
         //Else, it is the wrong answer
         else{
@@ -158,6 +202,8 @@ $(document).ready(function(){
             //If they've gotten 5 questions wrong, the game is over
             if (newMaxScore - currentScore >= 500){
                 console.log("Game over")
+                document.querySelector(".modalBox").style.display = "flex"
+                document.querySelector("#endScore").innerHTML = `Score: ${currentScore} / ${newMaxScore}`
             }
             else{
                 useApiReqVideoGames();
@@ -171,21 +217,41 @@ $(document).ready(function(){
         //If the correct answer is clicked, add 100 points and move on to next question
         if (document.querySelector("#answer3").innerHTML == correct){
             console.log("Correct answer selected")
-            //Setting new score since question was correct
-            let currentScore = parseInt(localStorage.getItem("score"));
-            let newScore = currentScore + 100;
+            if (hintCounter > 0){
+                //Setting new score since question was correct
+                let currentScore = parseInt(localStorage.getItem("score"));
+                let newScore = currentScore + 50;
 
-            //Setting new max score since 1 more question has been done
-            let currentMaxScore = parseInt(localStorage.getItem("maxScore"));
-            let newMaxScore = currentMaxScore + 100;
+                //Setting new max score since 1 more question has been done
+                let currentMaxScore = parseInt(localStorage.getItem("maxScore"));
+                let newMaxScore = currentMaxScore + 100;
 
-            //Setting new values into the localStorage
-            localStorage.setItem("score", newScore);
-            localStorage.setItem("maxScore", newMaxScore);
+                //Setting new values into the localStorage
+                localStorage.setItem("score", newScore);
+                localStorage.setItem("maxScore", newMaxScore);
 
-            //Displaying it to user in HTML
-            document.querySelector("#score").innerHTML = `Score: ${newScore}/ ${newMaxScore}`
-            useApiReqVideoGames();
+                //Displaying it to user in HTML
+                document.querySelector("#score").innerHTML = `Score: ${newScore}/ ${newMaxScore}`
+                useApiReqVideoGames();
+            }
+            //Else, award full points
+            else{
+                //Setting new score since question was correct
+                let currentScore = parseInt(localStorage.getItem("score"));
+                let newScore = currentScore + 100;
+
+                //Setting new max score since 1 more question has been done
+                let currentMaxScore = parseInt(localStorage.getItem("maxScore"));
+                let newMaxScore = currentMaxScore + 100;
+
+                //Setting new values into the localStorage
+                localStorage.setItem("score", newScore);
+                localStorage.setItem("maxScore", newMaxScore);
+
+                //Displaying it to user in HTML
+                document.querySelector("#score").innerHTML = `Score: ${newScore}/ ${newMaxScore}`
+                useApiReqVideoGames();
+            }
         }
         //Else, it is the wrong answer
         else{
@@ -206,6 +272,8 @@ $(document).ready(function(){
             //If they've gotten 5 questions wrong, the game is over
             if (newMaxScore - currentScore >= 500){
                 console.log("Game over")
+                document.querySelector(".modalBox").style.display = "flex"
+                document.querySelector("#endScore").innerHTML = `Score: ${currentScore} / ${newMaxScore}`
             }
             else{
                 useApiReqVideoGames();
@@ -218,22 +286,41 @@ $(document).ready(function(){
 
         //If the correct answer is clicked, add 100 points and move on to next question
         if (document.querySelector("#answer4").innerHTML == correct){
-            console.log("Correct answer selected")
-            //Setting new score since question was correct
-            let currentScore = parseInt(localStorage.getItem("score"));
-            let newScore = currentScore + 100;
+            if (hintCounter > 0){
+                //Setting new score since question was correct
+                let currentScore = parseInt(localStorage.getItem("score"));
+                let newScore = currentScore + 50;
 
-            //Setting new max score since 1 more question has been done
-            let currentMaxScore = parseInt(localStorage.getItem("maxScore"));
-            let newMaxScore = currentMaxScore + 100;
+                //Setting new max score since 1 more question has been done
+                let currentMaxScore = parseInt(localStorage.getItem("maxScore"));
+                let newMaxScore = currentMaxScore + 100;
 
-            //Setting new values into the localStorage
-            localStorage.setItem("score", newScore);
-            localStorage.setItem("maxScore", newMaxScore);
+                //Setting new values into the localStorage
+                localStorage.setItem("score", newScore);
+                localStorage.setItem("maxScore", newMaxScore);
 
-            //Displaying it to user in HTML
-            document.querySelector("#score").innerHTML = `Score: ${newScore}/ ${newMaxScore}`
-            useApiReqVideoGames();
+                //Displaying it to user in HTML
+                document.querySelector("#score").innerHTML = `Score: ${newScore}/ ${newMaxScore}`
+                useApiReqVideoGames();
+            }
+            //Else, award full points
+            else{
+                //Setting new score since question was correct
+                let currentScore = parseInt(localStorage.getItem("score"));
+                let newScore = currentScore + 100;
+
+                //Setting new max score since 1 more question has been done
+                let currentMaxScore = parseInt(localStorage.getItem("maxScore"));
+                let newMaxScore = currentMaxScore + 100;
+
+                //Setting new values into the localStorage
+                localStorage.setItem("score", newScore);
+                localStorage.setItem("maxScore", newMaxScore);
+
+                //Displaying it to user in HTML
+                document.querySelector("#score").innerHTML = `Score: ${newScore}/ ${newMaxScore}`
+                useApiReqVideoGames();
+            }
         }
         //Else, it is the wrong answer
         else{
@@ -254,6 +341,8 @@ $(document).ready(function(){
             //If they've gotten 5 questions wrong, the game is over
             if (newMaxScore - currentScore >= 500){
                 console.log("Game over")
+                document.querySelector(".modalBox").style.display = "flex"
+                document.querySelector("#endScore").innerHTML = `Score: ${currentScore} / ${newMaxScore}`
             }
             else{
                 useApiReqVideoGames();

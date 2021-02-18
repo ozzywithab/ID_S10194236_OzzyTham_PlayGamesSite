@@ -1,0 +1,80 @@
+*{
+    margin: 0%;
+}
+
+/* Setting the background colour of the entire page */
+body{
+    background-color: #1e355c;
+}
+
+/* Navigation bar CSS */
+header{
+    background-color: white;
+    color: #1e355c;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 2% 15px 2%;
+}
+
+/* Navigation bar CSS so list items have no dots*/
+.links{
+    list-style: none;
+}
+
+/*Navigation bar CSS, spacing out the buttons*/
+.links li{
+    display: inline-block;
+    padding: 0px 25px;
+}
+
+/*CSS for nav bar text*/
+.links li a{
+    font-size: 20px;
+    color: #1e355c;
+    text-decoration: none;
+}
+
+.siteName a{
+    text-decoration: none;
+    color: #1e355c;
+}
+
+/*CSS for nav bar text when hovering*/
+.links li a:hover, .siteName:hover{
+    color: #658891;
+}
+
+lottie-player{
+    height: 200px;
+}
+
+.contentBox{
+    background-color: white;
+    margin-top: 50px;
+    margin-left: 5%;
+    margin-right: 5%;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.dicePictures{
+    height: 200px;
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#diceOnePicture img{
+    height: 150px;
+    width: 150px;
+}
+
+#diceTwoPicture img{
+    height: 150px;
+    width: 150px;
+}

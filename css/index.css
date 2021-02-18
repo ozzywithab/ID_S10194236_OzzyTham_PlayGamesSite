@@ -64,7 +64,8 @@ header{
     color: #20345c;
     padding: 25px;
     background-color: white;
-    width: fit-content; height: fit-content;
+    width: fit-content; 
+    height: fit-content;
 }
 
 /* Making it so a tags that link buttons to another page does not have 

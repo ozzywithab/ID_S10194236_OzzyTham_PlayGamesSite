@@ -3,21 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/trivia.css"> 
     <title>Trivia</title>
 </head>
 <body>
-    <h1>Trivia API Testing</h1>
-    <h4 id = "score">Score: 0</h4>
-    <p id = "category"></p>
-    <p id = "question"></p>
-    <button id = "answer1"></button>
-    <button id = "answer2"></button>
-    <button id = "answer3"></button>
-    <button id = "answer4"></button>
-    <button id = "hint">HINT!</button>
+    <!--Navigation bar-->
+    <header>
+        <h3 class = "siteName"><a href = "index.html">PlayGames</a></h3>
+        <nav>
+            <ul class = "links">
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "api.html">API's</a></li>
+                <li><a href = "contact.html">Contact us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class = "contentBox">
+        <div class = "questionData">
+            <h2>Trivia Game!</h2>
+            <h4 id = "question"></h4>
+            <p id = "category"></p>
+            <p id = "score">Score: 0</p>
+        </div>
+        <div class= "container">
+            <button id = "answer1" class="btn btn-secondary btn-lg"></button>
+            <button id = "answer2" class="btn btn-secondary btn-lg"></button>
+            <button id = "answer3" class="btn btn-secondary btn-lg"></button>
+            <button id = "answer4" class="btn btn-secondary btn-lg"></button>
+            <button id = "hint" class="btn btn-success btn-lg">HINT!</button>
+        </div>
+    </div>
 
+    <div class = "modalBox">
+        <div class = "modalContent">
+            <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_jieat2.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
+            <h3 id = "endScore"></h3>
+            <a href = "Trivia.html"><button id = "playAgainButton" class="btn btn-outline-primary btn-lg">Play again!</button></a>
+        </div>
+    </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="js/triviaJS.js"></script>
 </body>
 </html>
