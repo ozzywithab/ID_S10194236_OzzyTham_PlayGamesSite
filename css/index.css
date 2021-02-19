@@ -18,6 +18,12 @@ header{
     padding: 15px 2% 15px 2%;
 }
 
+/* Getting rid of text decoration on the big "PlayGames" in navigation bar */
+.siteName a{
+    text-decoration: none;
+    color: #1e355c;
+}
+
 /* Navigation bar CSS so list items have no dots*/
 .links{
     list-style: none;
@@ -41,6 +47,7 @@ header{
     color: #658891;
 }
 
+/* CSS for container that holds main background of site */
 .bigBackground{
     position: relative;
     height: fit-content;
@@ -48,12 +55,12 @@ header{
     margin-bottom: -15px;
 }
 
+/* CSS for lottie animation that is in bigBackground */
 .bigBackground lottie-player{
     width: 100%;
 }
 
-
-
+/* CSS for text that is above the lottie animation as part of the main background */
 .bigBackground h3{
     position: absolute;
     margin: auto;
@@ -68,9 +75,6 @@ header{
     height: fit-content;
 }
 
-/* Making it so a tags that link buttons to another page does not have 
-any decorations and look normal */
-
 /* Changing bootstrap properties so container is flush with browser edges*/
 .container-fluid{
     display: flex;
@@ -80,6 +84,7 @@ any decorations and look normal */
     padding-right: 0px;
 }
 
+/* Changing colour on hover on the games' buttons on the bottom of the site */
 .container-fluid a:hover{
     color: #658891;
 }
@@ -98,6 +103,7 @@ any decorations and look normal */
     background-image: linear-gradient(#1E355c, #38668E);
 }
 
+/* Turning opacity down on the minor text explaining game at bottom of site */
 .flex-box p {
     color: rgba(255, 255, 255, 0.50);
 }

@@ -8,25 +8,29 @@
     <link rel="stylesheet" href="css/trivia.css"> 
     <title>Trivia</title>
 </head>
-<body>
+<body style="background-image: url('images/triviaBackground.png');">
     <!--Navigation bar-->
     <header>
         <h3 class = "siteName"><a href = "index.html">PlayGames</a></h3>
         <nav>
             <ul class = "links">
                 <li><a href = "index.html">Home</a></li>
-                <li><a href = "api.html">API's</a></li>
-                <li><a href = "contact.html">Contact us</a></li>
+                <li><a href = "Trivia.html">Trivia</a></li>
+                <li><a href = "Dice.html">Dice</a></li>
+                <li><a href = "Blackjack.html">Blackjack</a></li>
             </ul>
         </nav>
     </header>
+    <!-- Content box that contains question information and buttons for player to answser with -->
     <div class = "contentBox">
+        <!-- Where the question data and player's score go -->
         <div class = "questionData">
             <h2>Trivia Game!</h2>
             <h4 id = "question"></h4>
             <p id = "category"></p>
             <p id = "score">Score: 0</p>
         </div>
+        <!-- Where the buttons the player use to answer question are -->
         <div class= "container">
             <button id = "answer1" class="btn btn-secondary btn-lg"></button>
             <button id = "answer2" class="btn btn-secondary btn-lg"></button>
@@ -36,6 +40,7 @@
         </div>
     </div>
 
+    <!-- Modal box that appears when player gets 5 questions wrong -->
     <div class = "modalBox">
         <div class = "modalContent">
             <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_jieat2.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>

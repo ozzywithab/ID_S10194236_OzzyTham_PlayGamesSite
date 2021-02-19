@@ -9,19 +9,21 @@
     <link rel="stylesheet" href="css/blackjack.css"> 
     <title>Blackjack</title>
 </head>
-<body>
+<body style="background-image: url('images/blackjackBackground.png');">
     <!--Navigation bar-->
     <header>
-        <h3 class = "siteName">PlayGames</h3>
+        <h3 class = "siteName"><a href = "index.html">PlayGames</a></h3>
         <nav>
             <ul class = "links">
                 <li><a href = "index.html">Home</a></li>
-                <li><a href = "api.html">API's</a></li>
-                <li><a href = "contact.html">Contact us</a></li>
+                <li><a href = "Trivia.html">Trivia</a></li>
+                <li><a href = "Dice.html">Dice</a></li>
+                <li><a href = "Blackjack.html">Blackjack</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- Content box that contains cards and buttons to play game -->
     <div class = "contentBox">
         <h4>Dealer's hand</h4>
         <div id = "dealerCards"></div>
@@ -35,32 +37,35 @@
         </div>
     </div>
 
+    <!-- Modal box that pops up when player wins -->
     <div id = "modalBoxWin">
         <div class = "modalContent">
             <h4>You win!</h4>
             <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_to9cPV.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
-            <h5 id = "endStatementPlayer">Testing</h5>
-            <h5 id = "endStatementDealer">Testing</h5>
+            <h5 id = "endStatementPlayer"></h5>
+            <h5 id = "endStatementDealer"></h5>
             <a href = "blackjack.html"><button id = "playAgainButton" class="btn btn-outline-primary btn-lg">Play again!</button></a>
         </div>
     </div>
 
+    <!-- Modal box that pops up when player loses -->
     <div id = "modalBoxLose">
         <div class = "modalContent">
             <h4>You lost!</h4>
             <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_t5ulirqh.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
-            <h5 id = "endStatementPlayerLose">Testing</h5>
-            <h5 id = "endStatementDealerLose">Testing</h5>
+            <h5 id = "endStatementPlayerLose"></h5>
+            <h5 id = "endStatementDealerLose"></h5>
             <a href = "blackjack.html"><button id = "playAgainButton" class="btn btn-outline-primary btn-lg">Play again!</button></a>
         </div>
     </div>
 
+    <!-- Modal box that pops up when it's a draw -->
     <div id = "modalBoxDraw">
         <div class = "modalContent">
             <h4>It's a draw!</h4>
             <lottie-player src="https://assets1.lottiefiles.com/packages/lf20_x0VEPF.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
-            <h5 id = "endStatementPlayer">Testing</h5>
-            <h5 id = "endStatementDealer">Testing</h5>
+            <h5 id = "endStatementPlayerDraw"></h5>
+            <h5 id = "endStatementDealerDraw"></h5>
             <a href = "blackjack.html"><button id = "playAgainButton" class="btn btn-outline-primary btn-lg">Play again!</button></a>
         </div>
     </div>

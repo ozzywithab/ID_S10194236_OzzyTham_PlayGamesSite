@@ -51,15 +51,6 @@ $(document).ready(function(){
         dealerHidden = cardDraw.cards[2]
         playerSecond = cardDraw.cards[3]
 
-        console.log("Testing")
-        // document.querySelector("#endStatementPlayer").innerHTML = `Your hand: DOUBLE ACES!`
-        // document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: -`
-        // document.querySelector("#modalBoxWin").style.display = "flex"
-
-        document.querySelector("#endStatementPlayerLose").innerHTML = `Your hand: TESTING`
-        document.querySelector("#endStatementDealerLose").innerHTML = `Dealer's hand: TESTING`
-        document.querySelector("#modalBoxLose").style.display = "flex"
-
         //Player has drawn 2 cards
         cardsDrawn += 2
 
@@ -192,17 +183,21 @@ $(document).ready(function(){
             console.log("Bust")
             document.getElementById("hit").disabled = true;
             document.getElementById("stay").disabled = true;
-            document.querySelector("#endStatementPlayer").innerHTML = `Your hand: ${playerTotal}`
-            document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: ${dealerTotal}`
-            document.querySelector("#modalBoxLose").style.display = "flex"
+            setTimeout(function() {
+                document.querySelector("#endStatementPlayerLose").innerHTML = `Your hand: ${playerTotal}`
+                document.querySelector("#endStatementDealerLose").innerHTML = `Dealer's hand: ${dealerTotal}`
+                document.querySelector("#modalBoxLose").style.display = "flex"
+              }, 1500);
         }
 
         //If the player has 5 cards in his hand, he wins
         if (cardsDrawn >= 5){
             console.log("You won")
-            document.querySelector("#endStatementPlayer").innerHTML = `Your hand: ${playerTotal}`
-            document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: -`
-            document.querySelector("#modalBoxWin").style.display = "flex"
+            setTimeout(function() {
+                document.querySelector("#endStatementPlayer").innerHTML = `Your hand: ${playerTotal}`
+                document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: -`
+                document.querySelector("#modalBoxWin").style.display = "flex"
+            }, 1500);
         }
 
     })
@@ -263,27 +258,38 @@ $(document).ready(function(){
         //If dealer's total hand is more than 21, he loses
         else if (dealerTotal >21){
             console.log(dealerTotal)
-            console.log("Dealer loses!")
+            console.log("Player wins")
+            setTimeout(function() {
+                document.querySelector("#endStatementPlayer").innerHTML = `Your hand: ${playerTotal}`
+                document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: ${dealerTotal}`
+                document.querySelector("#modalBoxWin").style.display = "flex"
+            }, 1500);
         }
         //If dealer's hand is less than 21 but more than 16, compare values
         else if (dealerTotal > 16){
             if (dealerTotal > playerTotal){
                 console.log("Dealer wins!")
-                document.querySelector("#endStatementPlayer").innerHTML = `Your hand: ${playerTotal}`
-                document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: ${dealerTotal}`
-                document.querySelector("#modalBoxLose").style.display = "flex"
+                setTimeout(function() {
+                    document.querySelector("#endStatementPlayerLose").innerHTML = `Your hand: ${playerTotal}`
+                    document.querySelector("#endStatementDealerLose").innerHTML = `Dealer's hand: ${dealerTotal}`
+                    document.querySelector("#modalBoxLose").style.display = "flex"
+                }, 1500);
             }
             else if (dealerTotal == playerTotal){
                 console.log("Draw!")
-                document.querySelector("#endStatementPlayer").innerHTML = `Your hand: ${playerTotal}`
-                document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: ${dealerTotal}`
-                document.querySelector("#modalBoxDraw").style.display = "flex"
+                setTimeout(function() {
+                    document.querySelector("#endStatementPlayerDraw").innerHTML = `Your hand: ${playerTotal}`
+                    document.querySelector("#endStatementDealerDraw").innerHTML = `Dealer's hand: ${dealerTotal}`
+                    document.querySelector("#modalBoxDraw").style.display = "flex"
+                }, 1500);
             }
             else{
                 console.log("Player wins")
-                document.querySelector("#endStatementPlayer").innerHTML = `Your hand: ${playerTotal}`
-                document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: ${dealerTotal}`
-                document.querySelector("#modalBoxWin").style.display = "flex"
+                setTimeout(function() {
+                    document.querySelector("#endStatementPlayer").innerHTML = `Your hand: ${playerTotal}`
+                    document.querySelector("#endStatementDealer").innerHTML = `Dealer's hand: ${dealerTotal}`
+                    document.querySelector("#modalBoxWin").style.display = "flex"
+                }, 1500);
             }
         }
     }

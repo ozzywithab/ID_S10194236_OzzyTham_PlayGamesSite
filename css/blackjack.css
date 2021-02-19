@@ -5,6 +5,7 @@
 /* Setting the background colour of the entire page */
 body{
     background-color: #1e355c;
+    /* background-image: url("/images/blackjackBackground.png"); */
 }
 
 /* Navigation bar CSS */
@@ -15,6 +16,12 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 15px 2% 15px 2%;
+}
+
+/* Getting rid of text decoration on the big "PlayGames" in navigation bar */
+.siteName a{
+    text-decoration: none;
+    color: #1e355c;
 }
 
 /* Navigation bar CSS so list items have no dots*/
@@ -40,6 +47,7 @@ header{
     color: #658891;
 }
 
+/* CSS for content box containing all content */
 .contentBox{
     background-color: white;
     margin-top: 50px;
@@ -53,14 +61,21 @@ header{
     flex-direction: column;
 }
 
+/* Setting size of cards displayed to player */
 #dealerCards img{
     height: 250px;
 }
 
+/* Setting size of cards displayed to player */
 #playerCards img{
     height: 250px;
 }
 
+.buttons{
+    margin-top: 30px;
+}
+
+/* CSS for modal box that pops up when player wins */
 #modalBoxWin{
     width: 100%;
     height: 100%;
@@ -72,6 +87,7 @@ header{
     display: none;
 }
 
+/* CSS for modal box that pops up when player loses */
 #modalBoxLose{
     width: 100%;
     height: 100%;
@@ -83,6 +99,7 @@ header{
     display: none;
 }
 
+/* CSS for modal box that pops up when player draws */
 #modalBoxDraw{
     width: 100%;
     height: 100%;
@@ -94,6 +111,7 @@ header{
     display: none;
 }
 
+/* CSS for content inside of modal boxes */
 .modalContent{
     height: 400px;
     width: 670px;
@@ -102,16 +120,19 @@ header{
     text-align: center;
 }
 
+/* Setting size and CSS for lottie animation inside of modal boxes */
 .modalContent lottie-player{
     margin-top: 20px;
     height: 150px;
     width: 100%;
 }
 
+/* CSS for score that appears in modal box */
 #endScore{
     margin-top: 40px;
 }
 
+/* CSS for button to play again in modal box */
 #playAgainButton{
     height: 60px;
     margin-top: 55px;

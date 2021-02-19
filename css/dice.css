@@ -39,6 +39,7 @@ header{
     text-decoration: none;
 }
 
+/* Getting rid of text decoration on the big "PlayGames" in navigation bar */
 .siteName a{
     text-decoration: none;
     color: #1e355c;
@@ -49,10 +50,12 @@ header{
     color: #658891;
 }
 
+/* CSS for lottie animation inside of contentBox */
 lottie-player{
     height: 200px;
 }
 
+/* CSS for content box containing all content */
 .contentBox{
     background-color: white;
     margin-top: 50px;
@@ -66,6 +69,7 @@ lottie-player{
     flex-direction: column;
 }
 
+/* CSS for container that contains dice pictures */
 .dicePictures{
     height: 200px;
     display: none;
@@ -73,11 +77,13 @@ lottie-player{
     justify-content: center;
 }
 
+/* CSS for dice pictures that appear */
 #diceOnePicture img{
     height: 150px;
     width: 150px;
 }
 
+/* CSS for dice pictures that appear */
 #diceTwoPicture img{
     height: 150px;
     width: 150px;

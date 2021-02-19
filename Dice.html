@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="css/dice.css"> 
     <title>Dice game</title>
 </head>
-<body>
+<body style="background-image: url('images/diceBackground.png');">
     <!--Navigation bar-->
     <header>
-        <h3 class = "siteName">PlayGames</h3>
+        <h3 class = "siteName"><a href = "index.html">PlayGames</a></h3>
         <nav>
             <ul class = "links">
                 <li><a href = "index.html">Home</a></li>
@@ -22,17 +22,24 @@
         </nav>
     </header>
 
+    <!-- Content box t hat contains buttons, lottie, and dice when rolled -->
     <div class = "contentBox">
         <h3>Guess the value of 2 dice!</h3>
         <div class = "lottieDice">
             <lottie-player src="https://assets3.lottiefiles.com/datafiles/IvYwQZ0wlB1eYm8/data.json"  background="transparent"  speed="1" loop  autoplay></lottie-player>
         </div>
+
+        <!-- Where the dice pictures appear when player rolls -->
         <div class = "dicePictures">
             <div id = "diceOnePicture"></div>
             <div id = "diceTwoPicture"></div>
         </div>
+
+        <!-- Prints result of player's roll -->
         <h4 id = "diceTotal"></h4>
         <h4 id = "winLoseStatement"></h4>
+
+        <!-- Button for player to guess -->
         <div class = "buttons">
             <button id = "1" class="btn btn-secondary btn-lg">1</button>
             <button id = "2" class="btn btn-secondary btn-lg">2</button>
